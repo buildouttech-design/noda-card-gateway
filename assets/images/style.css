@@ -1,0 +1,3 @@
+#payment > ul > li.wc_payment_method.payment_method_noda_card > img {
+    display: none;
+}

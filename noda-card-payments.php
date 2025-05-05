@@ -52,5 +52,17 @@ add_filter( 'woocommerce_gateway_title', function( $title, $gateway_id ) {
     }
     return $title;
 }, 10, 2 );
+// Hide Noda Icon in Checkout Payment Method Description
+function noda_hide_icon_checkout_css() {
+    if ( function_exists( 'is_checkout' ) && is_checkout() && ! is_admin() ) {
+        wp_add_inline_style( 'woocommerce-inline', '
+            #payment > ul > li.wc_payment_method.payment_method_noda_card > img {
+                display: none;
+            }
+        ' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'noda_hide_icon_checkout_css' );
+
 
 
