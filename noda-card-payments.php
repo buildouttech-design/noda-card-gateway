@@ -8,7 +8,7 @@ Plugin URI:        https://github.com/buildouttech-design/noda-card-gateway
 Description:       Accept credit and debit card payments securely via Noda with PCI-compliant redirection.
 Version:           1.0.0
 Requires at least: 5.3.0
-Requires PHP:      8.3.0
+Requires PHP:      8.2.0
 Author:            Paul Anthony McGowan
 Author URI:        https://buildouttechno.com
 Text Domain:       noda-card-gateway
