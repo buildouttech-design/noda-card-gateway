@@ -11,7 +11,7 @@ class WC_Gateway_Noda_Card extends WC_Payment_Gateway {
         $this->method_title       = __( 'NodaCard Gateway', 'noda-card-gateway' );
         $this->method_description = __( 'Accept credit and debit card gateway securely via Noda.', 'noda-card-gateway' );
         $this->has_fields         = false;
-  
+
         // Define form fields and load settings.
         $this->init_form_fields();
         $this->init_settings();
@@ -25,7 +25,6 @@ class WC_Gateway_Noda_Card extends WC_Payment_Gateway {
         $this->signature   = $this->get_option( 'signature' );
         $this->shop_id     = $this->get_option( 'shop_id' );
     
-
         // Save admin options.
         add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, [ $this, 'process_admin_options' ] );
     }
